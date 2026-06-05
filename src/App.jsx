@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BridgePage from "./pages/BridgePage.jsx";
 import ProductPage from "./pages/ProductPage.jsx";
+import TestimonialPage from "./pages/TestimonialPage.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<BridgePage />} />
-        <Route path='/product' element={<ProductPage />} />
+        <Route path='/' element={<ProductPage />} />
+        <Route path='/testimonials' element={<TestimonialPage />} />
       </Routes>
     </BrowserRouter>
   );
