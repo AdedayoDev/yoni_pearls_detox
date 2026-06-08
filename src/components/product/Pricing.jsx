@@ -11,7 +11,7 @@ export default function Pricing() {
               style={{ fontFamily: "'Poppins', sans-serif" }}
               className='relative text-center text-3xl md:text-4xl font-extrabold text-[#111827]'
             >
-              Struggling With Persistent Feminine Health Issues?
+              Your Testimony is NEXT!
             </p>
           </div>
         </div>
@@ -58,9 +58,17 @@ export default function Pricing() {
                     style={{ fontFamily: "'Poppins', sans-serif" }}
                     className='text-lg leading-8 text-[#475569]'
                   >
-                    3 pairs is #4500, but due to the 7-day promo we&apos;re
-                    running, you can get it for just #3000 when you order
-                    between now and 7 days.
+                    3 pairs is{" "}
+                    <strong className=' text-2xl text-[#ac0447]'>
+                      {" "}
+                      #4500,
+                    </strong>{" "}
+                    but due to the 7-day promo we&apos;re running, you can get
+                    it for just{" "}
+                    <strong className=' text-2xl text-[#ac0447]'>
+                      #3000
+                    </strong>{" "}
+                    when you order between now and 7 days.
                   </p>
                 </div>
               </div>
@@ -114,21 +122,41 @@ export default function Pricing() {
 
           <div className='rounded-[32px] border border-[#E5E7EB] bg-[#F8FAFC] p-8 shadow-sm'>
             <div className='space-y-6'>
-              <div className='rounded-3xl border border-[#FBBF24] bg-[#FFFBEB] p-6 flex items-start gap-4'>
-                <div className='text-3xl leading-none'>📣</div>
-                <div>
+              <div className='rounded-3xl border-4 border-[#B91C1C] bg-gradient-to-br from-[#FEE2E2] to-[#FEF2F2] p-0 overflow-hidden shadow-xl'>
+                {/* Warning Header */}
+                <div className='bg-[#B91C1C] px-6 py-4 flex items-center gap-3'>
+                  <span className='text-3xl'>⚠️</span>
                   <p
                     style={{ fontFamily: "'Poppins', sans-serif" }}
-                    className='text-sm uppercase tracking-[0.24em] text-[#B45309] font-semibold'
+                    className='text-white text-lg font-bold uppercase tracking-wide'
                   >
-                    Announcement
+                    WARNING: BEWARE OF FAKES!
+                  </p>
+                </div>
+
+                {/* Image */}
+                <div className='overflow-hidden'>
+                  <img
+                    src='/annoucement.jpeg'
+                    alt='Fake Yoni Pearls Warning'
+                    className='w-full h-auto object-cover'
+                  />
+                </div>
+
+                {/* Important Info */}
+                <div className='p-6'>
+                  <p
+                    style={{ fontFamily: "'Poppins', sans-serif" }}
+                    className='text-base font-bold text-[#B91C1C] mb-3'
+                  >
+                    Number of pairs depends on what you are treating.
                   </p>
                   <p
                     style={{ fontFamily: "'Poppins', sans-serif" }}
-                    className='text-base leading-7 text-[#44403C] font-semibold'
+                    className='text-sm text-[#7F1D1D] leading-relaxed'
                   >
-                    Beware of fake yoni pearls. Number of pairs depends on what
-                    you are treating.
+                    Don't fall for counterfeits! Ensure you're getting genuine,
+                    100% natural Yoni Pearls from us.
                   </p>
                 </div>
               </div>
@@ -158,7 +186,7 @@ export default function Pricing() {
 
               <div className='text-center'>
                 <WhatsAppButton
-                  message='I want to order 1 cleanse - 3 pairs at the 7-day promo price of #3000'
+                  message='I want to buy'
                   label='ORDER NOW!'
                   className='mx-auto w-full max-w-sm'
                 />

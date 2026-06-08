@@ -5,23 +5,12 @@ export default function Hero() {
         <div className='mx-auto max-w-5xl text-center'>
           <h1
             style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 500 }}
-            className='text-4xl md:text-5xl lg:text-6xl mt-4 leading-tight text-[#C2185B]'
+            className='text-3xl md:text-5xl lg:text-6xl mt-4 leading-tight text-[#C2185B]'
           >
-            Struggling With Persistent Feminine Health Issues?
+            <strong> Are</strong> you    <strong className="text-5xl inline-block">battling </strong> with any of the following health issues? <span className="uppercase font-semibold block text-[#ac0447] text-5xl leading-tight ">Your solution has come!</span>
           </h1>
 
-          <p
-            style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 200 }}
-            className='heading-sub mt-4 text-lg md:text-xl text-text-muted'
-          >
-            If you're battling any of the following your Transformation Starts
-            Here.
-          </p>
-
           <div className='mt-12 mx-auto max-w-4xl'>
-            <h3 className='font-semibold text-lg mb-8 text-center'>
-              Common issues we help with
-            </h3>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
               <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#FFF9C4] to-[#FFE082] border-2 border-[#C2185B] text-center'>
                 <p className='font-semibold text-lg text-[#2D2D2D]'>Fibroid</p>

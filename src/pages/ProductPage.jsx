@@ -9,21 +9,23 @@ import FinalCta from "../components/product/FinalCta";
 
 function ProductPage() {
   const pageRef = useRef(null);
-  const usedNames = useRef(new Set());
+  const usedProfiles = useRef(new Set());
   const [popupVisible, setPopupVisible] = useState(false);
   const [buyerPopup, setBuyerPopup] = useState(null);
 
-  const nigerianNames = [
-    "Ada",
-    "Ngozi",
-    "Chioma",
-    "Aisha",
-    "Ife",
-    "Funke",
-    "Temi",
-    "Bimpe",
-    "Uche",
-    "Sade",
+  const buyerProfiles = [
+    { name: "Sade", city: "Lagos" },
+    { name: "Amina", city: "Abuja" },
+    { name: "Chioma", city: "Port Harcourt" },
+    { name: "Tosin", city: "Ibadan" },
+    { name: "Ngozi", city: "Enugu" },
+    { name: "Aisha", city: "Kano" },
+    { name: "Efe", city: "Benin City" },
+    { name: "Ife", city: "Owerri" },
+    { name: "Ini", city: "Calabar" },
+    { name: "Bukola", city: "Warri" },
+    { name: "Funke", city: "Abeokuta" },
+    { name: "Hafsat", city: "Kaduna" },
   ];
 
   useEffect(() => {
@@ -48,38 +50,25 @@ function ProductPage() {
   }, []);
 
   useEffect(() => {
-    const cities = [
-      "Lagos",
-      "Abuja",
-      "Port Harcourt",
-      "Ibadan",
-      "Enugu",
-      "Kano",
-      "Benin City",
-      "Owerri",
-      "Calabar",
-      "Warri",
-      "Abeokuta",
-      "Kaduna",
-    ];
     const quantities = [6, 7, 8, 9, 10, 12];
     let intervalId;
 
     const firePopup = () => {
-      let pool = nigerianNames.filter((name) => !usedNames.current.has(name));
+      let pool = buyerProfiles.filter(
+        (profile) => !usedProfiles.current.has(profile.name),
+      );
       if (!pool.length) {
-        usedNames.current.clear();
-        pool = [...nigerianNames];
+        usedProfiles.current.clear();
+        pool = [...buyerProfiles];
       }
 
-      const name = pool[Math.floor(Math.random() * pool.length)];
-      const city = cities[Math.floor(Math.random() * cities.length)];
+      const profile = pool[Math.floor(Math.random() * pool.length)];
       const qty = quantities[Math.floor(Math.random() * quantities.length)];
-      usedNames.current.add(name);
+      usedProfiles.current.add(profile.name);
 
-      setBuyerPopup({ name, city, qty });
+      setBuyerPopup({ ...profile, qty });
       setPopupVisible(true);
-      setTimeout(() => setPopupVisible(false), 6000);
+      setTimeout(() => setPopupVisible(false), 10000);
     };
 
     const initialTimeout = setTimeout(() => {

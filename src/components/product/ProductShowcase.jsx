@@ -3,18 +3,6 @@ import WhatsAppButton from "../ui/WhatsAppButton";
 const ProductShowcase = () => {
   const products = [
     {
-      id: 1,
-      image: "/yp1.jpg.jpeg",
-      alt: "Yoni Pearl 1",
-      text: "Pure & Natural",
-    },
-    {
-      id: 2,
-      image: "/yp2.jpg.jpeg",
-      alt: "Yoni Pearl 2",
-      text: "Clinically Tested",
-    },
-    {
       id: 3,
       image: "/yp6.jpg.jpeg",
       alt: "Yoni Pearl 6",
@@ -34,8 +22,8 @@ const ProductShowcase = () => {
         {/* H1 Heading */}
         <div className='text-center mb-4'>
           <h1
-            style={{ fontFamily: "'Bebas Neue', sans-serif" }}
-            className='text-5xl md:text-6xl font-bold text-[#2D2D2D] mb-6 leading-tight'
+            style={{ fontFamily: "'Bebas poppins', sans-serif", color: "#ac0447", fontWeight: 700 }}
+            className='text-5xl md:text-6xl font-bold leading-tight'
           >
             Behold The Power
           </h1>
@@ -44,11 +32,10 @@ const ProductShowcase = () => {
         {/* One-Line Power Statement */}
         <div className='text-center mb-16'>
           <p
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-            className='text-lg md:text-xl text-[#666] font-medium'
+            style={{ fontFamily: "'Poppins', sans-serif", color: "#ac0447" }}
+            className='text-lg md:text-xl  font-medium'
           >
-            Authentic Yoni Pearls crafted to restore wellness, confidence, and
-            vitality
+            Introducing Original Yoni Pearls :
           </p>
         </div>
 
@@ -81,6 +68,77 @@ const ProductShowcase = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* What is Yoni Pearls Section */}
+        <div className='mb-20'>
+          <h2
+            style={{ fontFamily: "'poppins', sans-serif" }}
+            className='text-4xl md:text-5xl font-bold text-[#ac0447] text-center mb-12'
+          >
+            What is Yoni Pearls?
+          </h2>
+
+          <div className='grid gap-8 md:grid-cols-3'>
+            {/* Card 1: Natural & Organic */}
+            <div className='bg-gradient-to-br from-[#FFF8F0] to-[#FFE4E1] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300'>
+              <div className='w-16 h-16 bg-[#ac0447] rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-2xl'>🌿</span>
+              </div>
+              <h3 className='text-xl font-bold text-[#2D2D2D] text-center mb-4'>
+                100% Natural & Organic
+              </h3>
+              <p className='text-[#666] text-center leading-relaxed'>
+                Carefully selected natural and organic herbs chosen to encourage
+                proper functioning of the reproductive organs and prevent the
+                development of more serious gynecological illnesses.
+              </p>
+            </div>
+
+            {/* Card 2: Ancient Wisdom */}
+            <div className='bg-gradient-to-br from-[#FFF8F0] to-[#FFE4E1] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300'>
+              <div className='w-16 h-16 bg-[#ac0447] rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-2xl'>🏯</span>
+              </div>
+              <h3 className='text-xl font-bold text-[#2D2D2D] text-center mb-4'>
+                5000+ Years of Tradition
+              </h3>
+              <p className='text-[#666] text-center leading-relaxed'>
+                Made from natural ingredients that have been used in traditional
+                Chinese medicine for more than 5000 years, proven and tested
+                through centuries.
+              </p>
+            </div>
+
+            {/* Card 3: Cleansing & Wellness */}
+            <div className='bg-gradient-to-br from-[#FFF8F0] to-[#FFE4E1] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300'>
+              <div className='w-16 h-16 bg-[#ac0447] rounded-full flex items-center justify-center mx-auto mb-4'>
+                <span className='text-2xl'>✨</span>
+              </div>
+              <h3 className='text-xl font-bold text-[#2D2D2D] text-center mb-4'>
+                Deep Cleansing & Care
+              </h3>
+              <p className='text-[#666] text-center leading-relaxed'>
+                Cleansing the vagina with Yoni Pearls helps eliminate toxins,
+                restore balance, and promote overall reproductive health
+                naturally.
+              </p>
+            </div>
+          </div>
+
+          {/* About Image */}
+          <div className='mt-12 flex flex-col md:flex-row justify-center gap-6'>
+            <img
+              src='/about.jpeg'
+              alt='About Yoni Pearls'
+              className='px-6 w-full max-w-2xl rounded-2xl shadow-lg object-cover'
+            />
+            <img
+              src='/about-2.jpeg'
+              alt='About Yoni Pearls'
+              className='w-full max-w-2xl rounded-2xl shadow-lg object-cover'
+            />
+          </div>
         </div>
 
         <div className='mt-12 text-center'>
