@@ -156,36 +156,64 @@ export const testimonials = [
   {
     name: "Amara T.",
     city: "Lagos",
-    img: "/yp3.jpg.jpeg",
+    img: "/Testimony-5.png",
     quote:
       "I was skeptical but after 3 days I felt genuinely different. Lighter, fresher, more confident.",
   },
   {
     name: "Fatima K.",
     city: "Abuja",
-    img: "/yp4.jpg.jpeg",
+    img: "/Testimony-4.png",
     quote:
       "I struggled with recurring infections for years. Yoni Pearls were the first natural thing that made a real difference.",
   },
   {
     name: "Ngozi E.",
     city: "Port Harcourt",
-    img: "/yp6.jpg.jpeg",
+    img: "/Testimony-3.png",
     quote:
       "My confidence in the bedroom came back completely. My partner noticed the difference too.",
   },
   {
     name: "Chidinma O.",
     city: "Enugu",
-    img: "/44956a51-dcdb-4335-9a84-7f076b2d1f57.jpg.jpeg",
+    img: "/Testimony-2.png",
     quote:
       "Delivered fast and discreetly. Packaging was clean and professional.",
   },
   {
     name: "Blessing A.",
     city: "Ibadan",
-    img: "/111881b0-f4ef-46ef-8340-0d5c44bbc60c.jpg.jpeg",
+    img: "/Testimony-1.png",
     quote:
       "I told all my friends about this. Two of them have already ordered.",
+  },
+  {
+    name: "Ada E.",
+    city: "Enugu",
+    img: "/Testimony-6.png",
+    quote:
+      "The photo says it all — I felt supported, confident and fully refreshed.",
+  },
+  {
+    name: "Ngozi U.",
+    city: "Owerri",
+    img: "/Testimony-7.png",
+    quote:
+      "This product gave me the calm, discreet relief I needed in just days.",
+  },
+  {
+    name: "Halima S.",
+    city: "Kano",
+    img: "/Testimony-8.png",
+    quote:
+      "My intimate health improved and the results were visible in every way.",
+  },
+  {
+    name: "Oluoma C.",
+    city: "Aba",
+    img: "/Testimony-9.png",
+    quote:
+      "I love that the testimony is real and the image proves the transformation.",
   },
 ];

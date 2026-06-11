@@ -1,4 +1,3 @@
-
 import { painPoints } from "../../data/productData";
 
 export default function PainPoints() {
@@ -12,7 +11,7 @@ export default function PainPoints() {
           {painPoints.map((item) => (
             <button
               key={item.title}
-              className='px-6 py-3 rounded-full bg-white border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-semibold hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300 flex items-center gap-2'
+              className='px-6 py-3 rounded-full bg-white border-2 border-[#C2185B] text-[#C2185B] font-semibold hover:bg-[#C2185B] hover:text-white transition-all duration-300 flex items-center gap-2'
             >
               <span className='text-lg'>{item.emoji}</span>
               <span>{item.title}</span>

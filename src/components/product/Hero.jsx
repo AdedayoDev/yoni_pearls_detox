@@ -1,47 +1,66 @@
-export default function Hero() {
-  return (
-    <section className='single-section bg-bg'>
-      <div className='section-container py-12 md:py-20 lg:py-28'>
-        <div className='mx-auto max-w-5xl text-center'>
-          <h1
-            style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 500 }}
-            className='text-3xl md:text-5xl lg:text-6xl mt-4 leading-tight text-[#C2185B]'
-          >
-            <strong> Are</strong> you    <strong className="text-5xl inline-block">battling </strong> with any of the following health issues? <span className="uppercase font-semibold block text-[#ac0447] text-5xl leading-tight ">Your solution has come!</span>
-          </h1>
+import { motion } from "framer-motion";
 
-          <div className='mt-12 mx-auto max-w-4xl'>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-              <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#FFF9C4] to-[#FFE082] border-2 border-[#C2185B] text-center'>
-                <p className='font-semibold text-lg text-[#2D2D2D]'>Fibroid</p>
-              </div>
-              <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#FFE5F0] to-[#FFF0F5] border-2 border-[#C2185B] text-center'>
-                <p className='font-semibold text-lg text-[#2D2D2D]'>
-                  🌸 Unpleasant vaginal odor
-                </p>
-              </div>
-              <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#FFF4E6] to-[#FFE8D1] border-2 border-[#C2185B] text-center'>
-                <p className='font-semibold text-lg text-[#2D2D2D]'>
-                  💧 Persistent vagina discharge
-                </p>
-              </div>
-              <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#E8F4F8] to-[#D1E8F2] border-2 border-[#C2185B] text-center'>
-                <p className='font-semibold text-lg text-[#2D2D2D]'>
-                  🔥 Itching and irritation
-                </p>
-              </div>
-              <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#FCE4EC] to-[#F8BBE2] border-2 border-[#C2185B] text-center'>
-                <p className='font-semibold text-lg text-[#2D2D2D]'>
-                  🩺 Recurrent infections
-                </p>
-              </div>
-              <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#E1F5FE] to-[#B3E5FC] border-2 border-[#C2185B] text-center'>
-                <p className='font-semibold text-lg text-[#2D2D2D]'>
-                  ⚖️ Hormonal imbalance concerns
-                </p>
-              </div>
+export default function Hero() {
+  const conditions = [
+    "Fibroid",
+    "Unpleasant Vaginal Odor",
+    "Persistent Vaginal Discharge",
+    "Itching And Irritation",
+    "Recurrent Infections",
+    "Hormonal Imbalance Concerns",
+  ];
+
+  const icons = ["🌺", "🌸", "💧", "🔥", "🩺", "⚖️"];
+
+  return (
+    <section className='relative overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.48),transparent_28%),linear-gradient(180deg,#fff7f8_0%,#fff1f4_100%)]'>
+      <div className='hero-blob hero-blob-1' />
+      <div className='hero-blob hero-blob-2' />
+      <div className='section-container relative py-14 md:py-16 lg:py-20'>
+        <div className='mx-auto grid gap-12 lg:grid-cols-[1.1fr_0.95fr] items-center'>
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className='space-y-8'
+          >
+            <div className='inline-flex text-center md:text-left  items-center rounded-full border border-white/70 bg-white/70 px-4 py-2 text-sm font-semibold uppercase tracking-[0.35em] text-[#921538] shadow-[0_18px_50px_rgba(194,24,91,0.14)] backdrop-blur-xl'>
+              Trusted By Women Across Nigeria
             </div>
-          </div>
+
+            <div className='space-y-5'>
+              <h1 className='text-4xl text-center md:text-left font-semibold leading-tight tracking-[-0.03em] text-[#341828] sm:text-5xl md:text-[3.5rem] lg:text-[4.4rem]'>
+                Are You{" "}
+                <span className='relative inline-flex'>
+                  <span className='relative z-10 text-[#c21658]'>Battling</span>
+                  <span className='absolute inset-x-0 -bottom-2 h-4 rounded-full bg-linear-to-r from-[#ffdce2] via-[#f8c5ff] to-[#afdbff] opacity-60 blur-2xl' />
+                </span>{" "}
+                With Any Of The Following Health Issues?
+              </h1>
+
+              <p className='max-w-3xl text-center md:text-left text-3xl font-extrabold uppercase tracking-[0.16em] text-[#ac0447] drop-shadow-[0_20px_40px_rgba(194,24,91,0.22)] sm:text-4xl md:text-[3.4rem]'>
+                Your Solution Has Come
+              </p>
+            </div>
+
+            <div className='grid gap-4 sm:grid-cols-2 xl:grid-cols-3'>
+              {conditions.map((condition, index) => (
+                <motion.button
+                  key={condition}
+                  type='button'
+                  whileHover={{ y: -4, scale: 1.02 }}
+                  className='group flex items-center gap-4 rounded-[30px] border border-white/60 bg-white/90 px-5 py-4 text-left shadow-[0_24px_60px_rgba(194,24,91,0.08)] transition duration-300 hover:border-[#C2185B]/70 hover:bg-[#fff2f8]'
+                >
+                  <span className='flex h-12 w-12 items-center justify-center rounded-2xl bg-linear-to-br from-[#ffebf3] to-[#eef5ff] text-xl'>
+                    {icons[index]}
+                  </span>
+                  <span className='font-semibold text-[#2c1f31]'>
+                    {condition}
+                  </span>
+                </motion.button>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

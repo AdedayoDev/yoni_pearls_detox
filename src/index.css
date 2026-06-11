@@ -340,6 +340,32 @@ body {
   }
 }
 
+.glass-card {
+  border-radius: 1.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(194, 24, 91, 0.08);
+}
+
+.gallery-card {
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 25px 70px rgba(194, 24, 91, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 32px 85px rgba(194, 24, 91, 0.14);
+}
+
+.shimmer-strip {
+  background: linear-gradient(90deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.12) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3.5s linear infinite;
+}
+
 .carousel-outer {
   overflow: hidden;
   width: 100%;
@@ -464,6 +490,10 @@ body {
   background: linear-gradient(90deg, rgba(253, 230, 138, 0.9), rgba(251, 191, 36, 0.7), rgba(253, 230, 138, 0.9));
   transform: translateX(-25%);
   animation: slide-gradient 8s ease-in-out infinite alternate;
+}
+
+.promo-gradient {
+  background: linear-gradient(90deg, #ffe5f1 0%, #fff0fb 50%, #f3e8ff 100%);
 }
 
 .bg-slide-animation > * {

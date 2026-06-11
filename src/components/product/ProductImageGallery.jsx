@@ -1,3 +1,4 @@
+import {motion} from "framer-motion";
 import WhatsAppButton from "../ui/WhatsAppButton";
 
 export default function ProductImageGallery() {
@@ -17,36 +18,51 @@ export default function ProductImageGallery() {
   ];
 
   return (
-    <section className='bg-white'>
-      <div className='section-container py-16 md:py-20'>
+    <section className='bg-[#f8edf3]'>
+      <div className='section-container py-16 md:py-20 lg:py-24'>
         <div className='mx-auto max-w-3xl text-center mb-12'>
-          <p
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-            className='text-sm uppercase tracking-[0.24em] text-[#ac0447] font-semibold'
-          >
-           Behold
+          <p className='text-sm uppercase tracking-[0.24em] text-[#ac0447] font-semibold'>
+            Behold
           </p>
-          <h2
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-            className='text-4xl md:text-5xl font-bold text-[#2D2D2D] mt-4'
-          >
+          <h2 className='text-4xl md:text-5xl font-bold text-[#2D2D2D] mt-4'>
             The Amazing Yoni Pearls
           </h2>
         </div>
 
-        <div className='grid gap-6 md:grid-cols-2'>
-          {galleryImages.map((image) => (
-            <div
-              key={image.src}
-              className='overflow-hidden rounded-4xl border border-[#E5E7EB] shadow-sm'
+        <div className='grid gap-6 lg:grid-cols-[1.18fr_0.82fr]'>
+          <div className='grid gap-6'>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className='gallery-card overflow-hidden rounded-4xl'
             >
               <img
-                src={image.src}
-                alt={image.alt}
+                src={galleryImages[0].src}
+                alt={galleryImages[0].alt}
                 className='h-96 w-full object-cover'
               />
-            </div>
-          ))}
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className='gallery-card hidden overflow-hidden rounded-4xl md:block'
+            >
+              <img
+                src={galleryImages[1].src}
+                alt={galleryImages[1].alt}
+                className='h-80 w-full object-cover'
+              />
+            </motion.div>
+          </div>
+
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className='gallery-card overflow-hidden rounded-4xl'
+          >
+            <img
+              src={galleryImages[2].src}
+              alt={galleryImages[2].alt}
+              className='h-full min-h-105 w-full object-cover'
+            />
+          </motion.div>
         </div>
 
         <div className='mt-10 text-center'>

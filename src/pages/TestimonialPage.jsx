@@ -7,10 +7,18 @@ import WhatsAppButton from "../components/ui/WhatsAppButton";
 function TestimonialPage() {
   return (
     <div className='page-wrapper'>
-      <section className='single-section bg-bg'>
-        <div className='section-container py-12 md:py-20 lg:py-28'>
-          <div className='max-w-5xl mx-auto text-center'>
-            <div className='mb-10 text-left'>
+      <section
+        className='relative overflow-hidden'
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at top, rgba(255,255,255,0.85), transparent 28%), linear-gradient(180deg, #fff1f8 0%, #fdf1f6 100%)",
+        }}
+      >
+        <div className='section-container py-12 md:py-16 lg:py-20'>
+          <div className='absolute left-8 top-8 h-32 w-32 rounded-full bg-[#ffd6e4]/70 blur-3xl' />
+          <div className='absolute right-8 top-32 h-40 w-40 rounded-full bg-[#e9e3ff]/70 blur-3xl' />
+          <div className='max-w-4xl mx-auto text-center'>
+            <div className='mb-8 text-left'>
               <Link
                 to='/'
                 className='inline-flex items-center gap-3 text-[#ac0447] font-semibold hover:text-[#7a0236]'
@@ -22,26 +30,20 @@ function TestimonialPage() {
               </Link>
             </div>
 
-            <p
-              style={{ fontFamily: "'Poppins', sans-serif" }}
-              className='text-base md:text-xl font-semibold uppercase tracking-[0.24em] text-[#ac0447]'
-            >
+            <p className='text-sm uppercase tracking-[0.32em] text-[#ac0447] font-semibold'>
               more testimonies from our customers
             </p>
-            <h1
-              style={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700 }}
-              className='text-4xl md:text-6xl lg:text-7xl uppercase leading-tight text-[#C2185B] mt-6'
-            >
-              YOUR TESTIMONY IS NEXT!
+            <h1 className='mt-6 text-5xl font-black uppercase leading-tight text-[#C2185B] md:text-6xl lg:text-7xl'>
+              your testimony is next
             </h1>
 
-            <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-4'>
-              <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#FFF9C4] to-[#FFE082] border-2 border-[#C2185B] text-center'>
+            <div className='mt-10 grid gap-4 md:grid-cols-2'>
+              <div className='rounded-[28px] border border-white/80 bg-white/90 p-6 shadow-[0_24px_60px_rgba(194,24,91,0.12)]'>
                 <p className='font-semibold text-lg text-[#2D2D2D]'>
                   Real stories, real healing
                 </p>
               </div>
-              <div className='px-6 py-5 rounded-xl bg-gradient-to-r from-[#FFE5F0] to-[#FFF0F5] border-2 border-[#C2185B] text-center'>
+              <div className='rounded-[28px] border border-white/80 bg-white/90 p-6 shadow-[0_24px_60px_rgba(194,24,91,0.12)]'>
                 <p className='font-semibold text-lg text-[#2D2D2D]'>
                   Trusted by women across Nigeria
                 </p>
@@ -53,19 +55,21 @@ function TestimonialPage() {
 
       <Testimonials />
 
-      <section className='section-container py-12 text-center'>
-        <p className='text-sm uppercase tracking-[0.24em] font-semibold text-[#ac0447]'>
-          Ready for your own story?
-        </p>
-        <h2 className='text-3xl md:text-4xl font-bold mt-4 text-[#2D2D2D]'>
-          Connect with us Now!
-        </h2>
-        <div className='mt-8 flex justify-center'>
-          <WhatsAppButton
-            href='https://wa.me/2347050704719'
-            label='Chat on WhatsApp'
-            className='w-full max-w-xs'
-          />
+      <section className='section-container py-14 text-center'>
+        <div className='max-w-3xl mx-auto rounded-4xl border border-[#f7e3ed] bg-white/95 p-10 shadow-[0_28px_70px_rgba(194,24,91,0.12)]'>
+          <p className='text-sm uppercase tracking-[0.32em] font-semibold text-[#ac0447]'>
+            Ready for your own story?
+          </p>
+          <h2 className='text-3xl md:text-4xl font-bold mt-4 text-[#2D2D2D]'>
+            Connect with us Now!
+          </h2>
+          <div className='mt-8 flex justify-center'>
+            <WhatsAppButton
+              href='https://wa.me/2347050704719'
+              label='Chat on WhatsApp'
+              className='w-full max-w-xs'
+            />
+          </div>
         </div>
       </section>
 
