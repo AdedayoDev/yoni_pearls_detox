@@ -16,13 +16,34 @@ const ProductShowcase = () => {
     },
   ];
 
+  const diseases = [
+    "PCOS",
+    "Cyst",
+    "Irregular menstrual cycle",
+    "Cramps",
+    "Foul odour",
+    "Yeast infection",
+    "STDs",
+    "Fibroids",
+    "Endometriosis",
+    "Vaginal dryness",
+    "Blocked tubes",
+    "Bladder issues",
+    "UTI",
+    "Infertility",
+  ];
+
   return (
     <section className='bg-white py-20 md:py-24'>
       <div className='section-container'>
         {/* H1 Heading */}
         <div className='text-center mb-4'>
           <h1
-            style={{ fontFamily: "'Bebas poppins', sans-serif", color: "#ac0447", fontWeight: 700 }}
+            style={{
+              fontFamily: "'Bebas poppins', sans-serif",
+              color: "#ac0447",
+              fontWeight: 700,
+            }}
             className='text-5xl md:text-6xl font-bold leading-tight'
           >
             Behold The Power
@@ -139,15 +160,35 @@ const ProductShowcase = () => {
               className='w-full max-w-2xl rounded-2xl shadow-lg object-cover'
             />
           </div>
+
+          <div className='mt-16 rounded-3xl bg-[#FFF4E6] p-10 shadow-lg'>
+            <h3
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+              className='text-3xl md:text-4xl font-bold text-[#ac0447] text-center mb-8'
+            >
+              Yoni pearls has been know to <span className='text-5xl ' >cure</span>  these diseases in female
+            </h3>
+            <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+              {diseases.map((disease) => (
+                <div
+                  key={disease}
+                  className='rounded-3xl border border-[#E5E7EB] bg-white p-5 text-center shadow-sm'
+                >
+                  <p className='font-semibold text-[#2D2D2D]'>{disease}</p>
+                </div>
+              ))}
+            </div>
+            <div className='mt-10 text-center'>
+              <WhatsAppButton
+                href='https://wa.me/2347050704719'
+                label='ORDER NOW!'
+                className='mx-auto w-full max-w-xs'
+              />
+            </div>
+          </div>
         </div>
 
-        <div className='mt-12 text-center'>
-          <WhatsAppButton
-            href='https://wa.me/2348136621545'
-            label='ORDER NOW!'
-            className='mx-auto w-full max-w-xs'
-          />
-        </div>
+        
       </div>
     </section>
   );

@@ -1,7 +1,9 @@
 ﻿import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Hero from "../components/product/Hero";
 import SolutionBanner from "../components/product/SolutionBanner";
 import ProductShowcase from "../components/product/ProductShowcase";
+import ProductImageGallery from "../components/product/ProductImageGallery";
 import Testimonials from "../components/product/Testimonials";
 import Pricing from "../components/product/Pricing";
 import Faqs from "../components/product/Faqs";
@@ -10,10 +12,7 @@ import FinalCta from "../components/product/FinalCta";
 function ProductPage() {
   const pageRef = useRef(null);
   const usedProfiles = useRef(new Set());
-  const [popupVisible, setPopupVisible] = useState(false);
-  const [buyerPopup, setBuyerPopup] = useState(null);
-
-  const buyerProfiles = [
+  const buyerProfilesRef = useRef([
     { name: "Sade", city: "Lagos" },
     { name: "Amina", city: "Abuja" },
     { name: "Chioma", city: "Port Harcourt" },
@@ -26,7 +25,9 @@ function ProductPage() {
     { name: "Bukola", city: "Warri" },
     { name: "Funke", city: "Abeokuta" },
     { name: "Hafsat", city: "Kaduna" },
-  ];
+  ]);
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [buyerPopup, setBuyerPopup] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,6 +55,7 @@ function ProductPage() {
     let intervalId;
 
     const firePopup = () => {
+      const buyerProfiles = buyerProfilesRef.current;
       let pool = buyerProfiles.filter(
         (profile) => !usedProfiles.current.has(profile.name),
       );
@@ -91,7 +93,18 @@ function ProductPage() {
 
         <ProductShowcase />
 
+        <ProductImageGallery />
+
         <Testimonials />
+
+        <div className='section-container text-center py-8'>
+          <Link
+            to='/testimonials'
+            className='inline-block text-blue-600 text-lg font-semibold hover:text-blue-800'
+          >
+            see more testimonials
+          </Link>
+        </div>
 
         <Pricing />
 
