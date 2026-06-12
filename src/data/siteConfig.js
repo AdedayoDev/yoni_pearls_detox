@@ -5,8 +5,8 @@ export function makeWhatsAppLink(message = "I want to buy") {
 }
 
 export const WHATSAPP_MESSAGES = {
-  default: "I want to buy",
-  starter: "I want to buy",
-  popular: "I want to buy",
-  value: "I want to buy",
+  default: "I want to buy Yoni Pearls",
+  starter: "I want to buy Yoni Pearls",
+  popular: "I want to buy Yoni Pearls",
+  value: "I want to buy Yoni Pearls",
 };
