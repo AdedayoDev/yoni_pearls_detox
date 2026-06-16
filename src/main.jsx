@@ -1,10 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode, useEffect } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { initFacebookPixel } from "./lib/facebookPixel";
 
-createRoot(document.getElementById('root')).render(
+function Main() {
+  useEffect(() => {
+    initFacebookPixel();
+  }, []);
+
+  return <App />;
+}
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <Main />
   </StrictMode>,
-)
+);
